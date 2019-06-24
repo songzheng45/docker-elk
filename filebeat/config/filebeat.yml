@@ -4,7 +4,7 @@ filebeat.inputs:
 
 - type: log
   enabled: true
-  encoding: plain
+  encoding: utf-8
   fields:
     _zb_api: true
   fields_under_root: true
@@ -21,7 +21,7 @@ filebeat.inputs:
 
 - type: log
   enabled: true
-  encoding: plain
+  encoding: utf-8
   fields:
     _zb_customer: true
   fields_under_root: true
