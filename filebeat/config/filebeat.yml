@@ -27,7 +27,7 @@ filebeat.inputs:
   fields_under_root: true
 
   paths:
-    - /opt/webroot/recharge-customer/log/**
+    - /opt/webroot/recharge-customer/log/*/*.log
     
   exclude_lines: ['^------------']
   multiline.pattern: ^[-]{10,}
