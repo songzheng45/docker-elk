@@ -14,7 +14,7 @@ filebeat.inputs:
     - /opt/webroot/recharge-api/log/error/*.log
     - /opt/webroot/recharge-api/log/warn/*.log
 
-  exclude_lines: ['^------------']
+  exclude_lines: ['^------------', '^[[:space:]]*$']
   multiline.pattern: ^[-]{10,}
   multiline.negate: true
   multiline.match: after
@@ -29,7 +29,7 @@ filebeat.inputs:
   paths:
     - /opt/webroot/recharge-customer/log/*/*.log
     
-  exclude_lines: ['^------------']
+  exclude_lines: ['^------------', '^[[:space:]]*$']
   multiline.pattern: ^[-]{10,}
   multiline.negate: true
   multiline.match: after
