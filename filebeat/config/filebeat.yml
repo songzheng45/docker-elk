@@ -96,9 +96,9 @@ output.elasticsearch:
   #ssl.key: "/etc/pki/client/cert.key"
 
 #----------------------------- Console output ---------------------------------
-output.console:
+#output.console:
   # Boolean flag to enable or disable the output module.
-  enabled: true
+  #enabled: true
 
   # Configure JSON encoding
   #codec.json:
