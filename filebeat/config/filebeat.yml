@@ -9,13 +9,13 @@ filebeat.inputs:
     _zb_api: true
   fields_under_root: true
 
+  scan_frequency: 1s
   paths:
     - /opt/webroot/recharge-api/log/info/*.log
     - /opt/webroot/recharge-api/log/error/*.log
     - /opt/webroot/recharge-api/log/warn/*.log
-
-  scan_frequency: 1s
-  exclude_lines: ['^------------', '^[[:space:]]*$']
+  
+  exclude_lines: ['^----------', '^[[:space:]]*$']
   multiline.pattern: ^[-]{10,}
   multiline.negate: true
   multiline.match: after
@@ -31,7 +31,7 @@ filebeat.inputs:
   paths:
     - /opt/webroot/recharge-customer/log/*/*.log
     
-  exclude_lines: ['^------------', '^[[:space:]]*$']
+  exclude_lines: ['^----------', '^[[:space:]]*$']
   multiline.pattern: ^[-]{10,}
   multiline.negate: true
   multiline.match: after
